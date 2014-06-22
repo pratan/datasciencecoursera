@@ -18,7 +18,7 @@ for ( dir in c("train", "test") ) {
 		x_data[,"training"] <- c(rep(0, nrow(x_data)))
 	}
 	
-	file_prefix <- (file_prefix, "Inertial Signals/", sep="")
+	file_prefix <- paste(file_prefix, "Inertial Signals/", sep="")
 	
 	total_acc_z <- read.csv( paste(file_prefix, "total_acc_z_",dir, ".txt", sep="") )
 	total_acc_y <- read.csv( paste(file_prefix, "total_acc_y_",dir, ".txt", sep="") )
